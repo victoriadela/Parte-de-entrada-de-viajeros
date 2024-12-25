@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulario de registro</h1>
+    <form action="https://formsubmit.co/mariadcarmengr@outlook.com" method="post">
+  
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="primer_apellido">Primer apellido:</label>
+        <input type="text" id="primer_apellido" name="primer_apellido" required><br><br>
+
+        <label for="segundo_apellido">Segundo apellido:</label>
+        <input type="text" id="segundo_apellido" name="segundo_apellido"><br><br>
+
+        <label for="sexo">Sexo</label>
+        <select id="sexo" name="sexo">
+            <option value="none"> </option>
+			<option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="otro">Otro</option>
+        </select><br><br>
+
+        <label for="tipo_documento">Tipo de documento de identidad:</label>
+        <select id="tipo_documento" name="tipo_documento">
+			<option value="none"> </option>
+            <option value="nie">NIE</option>
+            <option value="nif">NIF</option>
+            <option value="pas">PAS</option>
+            <option value="otro">Otro</option>
+        </select><br><br>
+
+        <label for="numero_documento">Número de documento de identidad:</label>
+        <input type="text" id="numero_documento" name="numero_documento"><br><br>
+
+        <label for="nacionalidad">Nacionalidad:</label>
+        <input type="text" id="nacionalidad" name="nacionalidad" required><br><br>
+
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+		
+		<label for="residencia">Lugar de residencia habitual:<br>(Dirección completa, código postal, provincia, municipio y país)</label>
+        <input type="text" id="residencia" name="residencia" required><br><br>
+
+        <label for="telefono">Teléfono móvil:</label>
+        <input type="tel" id="telefono" name="telefono"><br><br>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo"><br><br>
+
+        <label for="parentesco">Relación de parentesco entre los viajeros:<br>(en el caso de que alguno sea menor de edad)</label>
+        <input type="text" id="parentesco" name="parentesco" required><br><br>
+
+        <label for="numero_viajeros">Número de viajeros:</label>
+        <input type="number" id="numero_viajeros" name="numero_viajeros" min="1" max="4" required><br><br>
+
+        <label for="fecha_entrada">Fecha de entrada:</label>
+        <input type="date" id="fecha_entrada" name="fecha_entrada" required><br><br>
+
+        <label for="hora_entrada">Hora de entrada:</label>
+        <input type="time" id="hora_entrada" name="hora_entrada" required><br><br>
+
+        <label for="fecha_salida">Fecha de salida:</label>
+        <input type="date" id="fecha_salida" name="fecha_salida" required><br><br>
+
+        <label for="hora_salida">Hora de salida:</label>
+        <input type="time" id="hora_salida" name="hora_salida" required><br><br>
+
+		<label for="archivo_dni">Adjuntar copias del DNI</label>
+		<input type="file" id="archivo_dni_cara" name="archivo_dni_cara[]" accept=".jpg, .jpeg, .png, .pdf" multiple>
+		<input type="file" id="archivo_dni_dorso" name="archivo_dni_dorso[]" accept=".jpg, .jpeg, .png, .pdf" multiple>
+
+        <label for="firma">Firma:</label><br>
+        <canvas id="firma" width="400" height="200" style="border:1px solid #000;"></canvas><br>
+        <button type="button" onclick="limpiarFirma()">Limpiar</button><br><br>
+
+       
+        <button type="submit">Enviar</button>
+    </form>
+	<script src="script.js"></script>
+</body>
+</html>
